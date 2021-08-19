@@ -1,7 +1,7 @@
-package UIAutomation.classPage;
+package uiAutomation.classPage;
 
-import UIAutomation.initializer.PageInitialization;
-import UIAutomation.weatherData.Data;
+import uiAutomation.initializer.PageInitialization;
+import uiAutomation.weatherData.Data;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,9 +1,9 @@
-package UIAutomation.initializer;
+package uiAutomation.initializer;
 
-import UIAutomation.classPage.HomePage;
-import UIAutomation.classPage.ManageWeatherData;
-import UIAutomation.classPage.WeatherDetails;
-import UIAutomation.weatherData.Data;
+import uiAutomation.classPage.HomePage;
+import uiAutomation.classPage.ManageWeatherData;
+import uiAutomation.classPage.WeatherDetails;
+import uiAutomation.weatherData.Data;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import jsonData.JSONData;
 import org.json.simple.JSONObject;

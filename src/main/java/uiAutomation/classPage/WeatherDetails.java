@@ -1,7 +1,7 @@
-package UIAutomation.classPage;
+package uiAutomation.classPage;
 
-import UIAutomation.initializer.PageInitialization;
-import UIAutomation.initializer.WebDriverManagerSetup;
+import uiAutomation.initializer.PageInitialization;
+import uiAutomation.initializer.WebDriverManagerSetup;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package UIAutomation.weatherData;
+package uiAutomation.weatherData;
 
 public class Data {
     String temp;

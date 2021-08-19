@@ -1,4 +1,4 @@
-package jsonData;
+package initializer;
 
 public class JSONData {
     public String browser;
@@ -11,8 +11,8 @@ public class JSONData {
     public String variance;
     public String pressureVariance;
     public String windVariance;
-    public JSONData(String browser, String city, String url, String userDetailsApi, String q, String units,
-                    String appid, String variance,String pressureVariance,String windVariance){
+    public JSONData(String browser, String city, String url, String userDetailsApi, String q,
+                    String units, String appid, String variance,String pressureVariance,String windVariance){
         this.browser=browser;
         this.city=city;
         this.url=url;

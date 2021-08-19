@@ -1,11 +1,6 @@
-package uiAutomation.initializer;
+package initializer;
 
-import uiAutomation.classPage.HomePage;
-import uiAutomation.classPage.ManageWeatherData;
-import uiAutomation.classPage.WeatherDetails;
-import uiAutomation.weatherData.Data;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import jsonData.JSONData;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -59,28 +54,32 @@ public class WebDriverManagerSetup {
         driver.close();
     }
 
-    public static void main(String[] args) throws IOException, ParseException {
-
-        JSONData data1=new JSONData();
-        data1=readJSONFile();
-        System.out.println(data1.browser);
-        browserSetup(data1.browser, data1.url);
-
-        HomePage homePage=new HomePage(driver);
-        homePage.setSearchBar(data1.city);
-
-        WeatherDetails weatherDetails=new WeatherDetails(driver);
-        weatherDetails.weatherDetailsClassCall();
-
-        Data data=new Data();
-        ManageWeatherData manageWeatherData=new ManageWeatherData(driver);
-        data.setTemp(manageWeatherData.getTemp());
-        data.setPressure(manageWeatherData.getPressure());
-        data.setWind(manageWeatherData.getWind());
-        data.setHumidity(manageWeatherData.getHumidity());
-
-        System.out.println(data.getTemp()+"\n"+ data.getPressure()+"\n"+ data.getHumidity()+"\n"+ data.getWind());
-
-        tearDown();
-    }
+//    public static void main(String[] args) throws IOException, ParseException {
+//
+//        JSONData data1=new JSONData();
+//        data1=readJSONFile();
+//        System.out.println(data1.browser);
+//        browserSetup(data1.browser, data1.url);
+//
+//        HomePage homePage=new HomePage(driver);
+//        homePage.setSearchBar(data1.city);
+//
+//        WeatherDetails weatherDetails=new WeatherDetails(driver);
+////        weatherDetails.setMoreDetails();
+////        weatherDetails.switchToFrame();
+////        weatherDetails.scroll();
+//        weatherDetails.weatherDetailsClassCall();
+//
+//        Data data=new Data();
+//        ManageWeatherData manageWeatherData=new ManageWeatherData(driver);
+////        data.setTemp(manageWeatherData.getTemp());
+////        data.setPressure(manageWeatherData.getPressure());
+////        data.setWind(manageWeatherData.getWind());
+////        data.setHumidity(manageWeatherData.getHumidity());
+//        manageWeatherData.setData();
+//
+//        System.out.println(data.getTemp()+"\n"+ data.getPressure()+"\n"+ data.getHumidity()+"\n"+ data.getWind());
+//
+//        tearDown();
+//    }
 }

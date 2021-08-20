@@ -1,12 +1,12 @@
-package UIAutomation.classPage;
+package uiAutomation.classPage;
 
-import UIAutomation.initializer.PageInitialization;
-import UIAutomation.initializer.WebDriverManagerSetup;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import uiAutomation.initializer.PageInitialization;
+import uiAutomation.initializer.WebDriverManagerSetup;
 
 public class WeatherDetails extends PageInitialization {
     public Actions actions;

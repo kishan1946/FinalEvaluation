@@ -1,4 +1,4 @@
-package uiAutomation.initializer;
+package initializer;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +8,5 @@ public class PageInitialization {
         PageFactory.initElements(driver,this);
     }
 
-//    public Actions actions=new Actions(WebDriverManagerSetup.driver);
-//    public JavascriptExecutor js=(JavascriptExecutor) WebDriverManagerSetup.driver;
+
 }

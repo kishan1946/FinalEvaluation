@@ -5,5 +5,8 @@
   "userDetailsApi" : "https://api.openweathermap.org/data/2.5/weather",
   "q" : "Bengaluru",
   "units" : "metric",
-  "appid" : "7fe67bf08c80ded756e598d6f8fedaea"
+  "appid" : "7fe67bf08c80ded756e598d6f8fedaea",
+  "variance" : "5",
+  "pressureVariance" : "60",
+  "windVariance" : "8"
 }

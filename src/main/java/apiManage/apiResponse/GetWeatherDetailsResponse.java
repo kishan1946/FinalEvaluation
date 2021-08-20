@@ -1,6 +1,6 @@
-package uiAutomation.weatherData;
+package apiManage.apiResponse;
 
-public class Data {
+public class GetWeatherDetailsResponse {
     String temp;
     String pressure;
     String wind;

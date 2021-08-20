@@ -1,5 +1,6 @@
-package callAPIAndUIDetails;
+package comparator;
 
+import callAPIAndUIDetails.CallAPIAndUIClass;
 import comparator.VarianceCalculator;
 import initializer.JSONData;
 import initializer.WebDriverManagerSetup;

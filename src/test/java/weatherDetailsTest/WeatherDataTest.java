@@ -1,7 +1,7 @@
 package weatherDetailsTest;
 
 import callAPIAndUIDetails.CallAPIAndUIClass;
-import callAPIAndUIDetails.Comparator;
+import comparator.Comparator;
 import initializer.JSONData;
 import initializer.WebDriverManagerSetup;
 import org.json.simple.parser.ParseException;

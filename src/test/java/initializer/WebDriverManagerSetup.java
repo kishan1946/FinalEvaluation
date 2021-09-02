@@ -21,7 +21,7 @@ public class WebDriverManagerSetup {
         if (browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options=new ChromeOptions();
-            options.addArguments("--headless");
+//            options.addArguments("--headless");
             driver=new ChromeDriver(options);
             driver.get(url);
             driver.manage().window().maximize();

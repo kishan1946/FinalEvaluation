@@ -10,9 +10,10 @@ import java.io.IOException;
 
 public class ManageWeatherDetails {
     public Response apiCall() throws IOException, ParseException {
+        WebDriverManagerSetup webDriverManagerSetup=new WebDriverManagerSetup();
         GetAPIWeatherDetailsRequest getAPIWeatherDetails=new GetAPIWeatherDetailsRequest();
         JSONData data=new JSONData();
-        data= WebDriverManagerSetup.readJSONFile();
+        data= webDriverManagerSetup.readJSONFile();
         Response body=getAPIWeatherDetails.weatherDetails(data.userDetailsApi, data.q, data.units,data.appid);
         return body;
     }

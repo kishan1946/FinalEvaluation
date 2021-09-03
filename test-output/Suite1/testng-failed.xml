@@ -8,12 +8,13 @@
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="humidityTest"/>
+          <include name="pressureTest"/>
         </methods>
       </class> <!-- weatherDetailsTest.WeatherTest -->
       <class name="weatherDetailsTest.WeatherDataTest">
         <methods>
           <include name="tearDown"/>
-          <include name="weatherDataTest" invocation-numbers="3"/>
+          <include name="weatherDataTest" invocation-numbers="1 3"/>
           <include name="setup"/>
         </methods>
       </class> <!-- weatherDetailsTest.WeatherDataTest -->

@@ -2,11 +2,11 @@ package weatherDetailsTest;
 
 import callAPIAndUIDetails.CallAPIAndUIClass;
 import comparator.Comparator;
-import initializer.JSONData;
-import initializer.WebDriverManagerSetup;
+import jsonData.JSONData;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import uiAutomation.initializer.WebDriverManagerSetup;
 
 import java.io.IOException;
 

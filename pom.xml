@@ -24,7 +24,7 @@
                         <browser>chrome</browser>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <suiteXmlFile>/Users/k.k.k/IdeaProjects/FinalEvaluation1/target</suiteXmlFile>
+                        <suiteXmlFile>/Users/k.k.k/IdeaProjects/FinalEvaluation1/testing.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

@@ -26,21 +26,18 @@ public class WebDriverManagerSetup {
         if (browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options=new ChromeOptions();
-            options.addArguments("--headless");
+//            options.addArguments("--headless");
             driver=new ChromeDriver(options);
-            driver.get(url);
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         }
         else if (browser.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options=new FirefoxOptions();
-            options.addArguments("--headless");
+//            options.addArguments("--headless");
             driver=new FirefoxDriver(options);
-            driver.get(url);
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         }
+        driver.get(url);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
     public static JSONData readJSONFile() throws IOException, ParseException {
@@ -52,7 +49,7 @@ public class WebDriverManagerSetup {
         return new JSONData((String) jsonobj.get("browser"),(String) jsonobj.get("city"),(String) jsonobj.get("url"),
                 (String) jsonobj.get("userDetailsApi"),(String) jsonobj.get("q"),(String) jsonobj.get("units"),
                 (String) jsonobj.get("appid"),(String) jsonobj.get("variance"),
-                (String) jsonobj.get("pressureVariance"),(String) jsonobj.get("windVariance"));
+                (String) jsonobj.get("pressureVariance"),(String) jsonobj.get("windVariance"),(String) jsonobj.get("minVariance"));
     }
 
     public static void tearDown(){

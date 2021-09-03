@@ -2,36 +2,37 @@ package callAPIAndUIDetails;
 
 import apiManage.apiResponse.GetWeatherDetailsResponse;
 import apiManage.apiResponse.ManageWeatherDetails;
-import initializer.JSONData;
-import initializer.WebDriverManagerSetup;
+import jsonData.JSONData;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebElement;
 import uiAutomation.classPage.HomePage;
 import uiAutomation.classPage.ManageWeatherData;
 import uiAutomation.classPage.WeatherDetails;
+import uiAutomation.initializer.WebDriverManagerSetup;
 import uiAutomation.weatherData.Data;
 
 import java.io.IOException;
 
 public class CallAPIAndUIClass {
+    WebDriverManagerSetup webDriverManagerSetup=new WebDriverManagerSetup();
     public void homePage() throws IOException, ParseException {
         JSONData jsonData=new JSONData();
-        jsonData=WebDriverManagerSetup.readJSONFile();
-        HomePage homePage=new HomePage(WebDriverManagerSetup.driver);
+        jsonData= WebDriverManagerSetup.readJSONFile();
+        HomePage homePage=new HomePage(webDriverManagerSetup.driver);
         homePage.setSearchBar(jsonData.city);
 
     }
     public void weatherDetails(){
-        WeatherDetails weatherDetails=new WeatherDetails(WebDriverManagerSetup.driver);
+        WeatherDetails weatherDetails=new WeatherDetails(webDriverManagerSetup.driver);
         weatherDetails.setMoreDetails();
         WebElement switchToiFrame=weatherDetails.switchToiFrame();
         WebElement removeAdd=weatherDetails.getRemoveAdd();
-        WebDriverManagerSetup.driver.switchTo().frame(switchToiFrame);
+        webDriverManagerSetup.driver.switchTo().frame(switchToiFrame);
         removeAdd.click();
         weatherDetails.scroll();
     }
     public void manageWeatherData(){
-        ManageWeatherData manageWeatherData=new ManageWeatherData(WebDriverManagerSetup.driver);
+        ManageWeatherData manageWeatherData=new ManageWeatherData(webDriverManagerSetup.driver);
         Data weatherData=new Data();
         weatherData.setTemp(manageWeatherData.getTemp());
         weatherData.setPressure(manageWeatherData.getPressure());
@@ -40,25 +41,25 @@ public class CallAPIAndUIClass {
 
     }
     public String getUITemp(){
-        ManageWeatherData manageWeatherData=new ManageWeatherData(WebDriverManagerSetup.driver);
+        ManageWeatherData manageWeatherData=new ManageWeatherData(webDriverManagerSetup.driver);
         Data data=new Data();
         data.setTemp(manageWeatherData.getTemp());
         return data.getTemp();
     }
     public String getUIPressure(){
-        ManageWeatherData manageWeatherData=new ManageWeatherData(WebDriverManagerSetup.driver);
+        ManageWeatherData manageWeatherData=new ManageWeatherData(webDriverManagerSetup.driver);
         Data data=new Data();
         data.setPressure(manageWeatherData.getPressure());
         return data.getPressure();
     }
     public String getUIWind(){
-        ManageWeatherData manageWeatherData=new ManageWeatherData(WebDriverManagerSetup.driver);
+        ManageWeatherData manageWeatherData=new ManageWeatherData(webDriverManagerSetup.driver);
         Data data=new Data();
         data.setWind(manageWeatherData.getWind());
         return data.getWind();
     }
     public String getUIHumidity(){
-        ManageWeatherData manageWeatherData=new ManageWeatherData(WebDriverManagerSetup.driver);
+        ManageWeatherData manageWeatherData=new ManageWeatherData(webDriverManagerSetup.driver);
         Data data=new Data();
         data.setHumidity(manageWeatherData.getHumidity());
         return data.getHumidity();

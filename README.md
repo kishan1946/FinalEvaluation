@@ -33,7 +33,7 @@
 * Used four metric for test- *Temperature* , *Pressure* , *WindSpeed* , *Humidity*.
 
 **Data Driven**
-* All the data fetched form `JSON` [inputData.json](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/json/inputData.json)
+* All the data fetched from `JSON` [inputData.json](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/json/inputData.json)
 * [JsonData Class](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/src/main/java/jsonData/JSONData.java) created class for fetching all json data.
 
 **Maven Command-**

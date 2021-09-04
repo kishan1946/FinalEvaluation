@@ -1,11 +1,10 @@
-
 # FinalEvaluation
 
 **Patterns Used in Application**
 
 * Factory Pattern - [Initializer](https://gitlab.com/kishank1946/finalevaluation/-/tree/modifiedTesting/src/main/java/UIAutomation/initializer) Added Factory Pattern in initializer package.
 
-    * ...In this two class- [WebDriverSetup Class](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/src/main/java/UIAutomation/initializer/WebDriverManagerSetup.java)    [PageInitialization Class](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/src/main/java/UIAutomation/initializer/PageInitialization.java)
+    * In this two classes- [WebDriverSetup Class](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/src/main/java/UIAutomation/initializer/WebDriverManagerSetup.java)    [PageInitialization Class](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/src/main/java/UIAutomation/initializer/PageInitialization.java)
     
  * Page Object Model - 
     * [HomePage Class](https://gitlab.com/kishank1946/finalevaluation/-/blob/modifiedTesting/src/main/java/UIAutomation/classPage/HomePage.java)     

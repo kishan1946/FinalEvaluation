@@ -9,7 +9,7 @@
 <!--    <parameter name="email" value="kumar@gmail.com"></parameter>-->
 <!--    <parameter name="pass" value="Apple@1Banana#Cat"></parameter>-->
 <!--    <test name="Test1" parallel="classes" thread-count="2">-->
-    <test name="Test1">
+    <test name="Test1" parallel="methods" thread-count="2">
         <classes>
             <class name="weatherDetailsTest.WeatherTest"></class>
             <class name="weatherDetailsTest.WeatherDataTest"></class>

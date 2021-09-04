@@ -13,11 +13,11 @@ public class ManageWeatherData extends PageInitialization {
 
     @FindBy(css = ".display-temp")
     WebElement temp;
-    @FindBy(xpath = "/html/body/div/div[5]/div[1]/div[1]/div[2]/div[4]/div[1]/div[3]/div[2]")
+    @FindBy(xpath = "//div[1]/div[3][@class=\"detail-item spaced-content\"]/div[2]")
     WebElement wind;
-    @FindBy(xpath = "/html/body/div/div[5]/div[1]/div[1]/div[2]/div[4]/div[1]/div[5]/div[2]")
+    @FindBy(xpath = "//div[1]/div[6][@class=\"detail-item spaced-content\"]/div[2]")
     WebElement humidity;
-    @FindBy(xpath = "/html/body/div/div[5]/div[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[2]")
+    @FindBy(xpath = "//div[2]/div[2][@class=\"detail-item spaced-content\"]/div[2]")
     WebElement pressure;
 
     public String getTemp() {

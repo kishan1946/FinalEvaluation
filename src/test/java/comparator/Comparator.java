@@ -20,7 +20,6 @@ public class Comparator {
             case "Temperature":
                 double tempDifference=Math.abs(Double.parseDouble(callAPIAndUIClass.getUITemp())-Double.parseDouble(callAPIAndUIClass.getAPITemp()));
                 Reporter.log("tempDifference : "+Double.toString(tempDifference));
-                System.out.println(driver);
                 return new VarianceCalculator().getVariance(Double.parseDouble(callAPIAndUIClass.getUITemp()),
                         Double.parseDouble(callAPIAndUIClass.getAPITemp()),Double.parseDouble(data.variance));
 

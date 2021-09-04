@@ -32,13 +32,13 @@ public class WebDriverManagerSetup {
         if (browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options=new ChromeOptions();
-            options.addArguments("--headless");
+//            options.addArguments("--headless");
             driver=new ChromeDriver(options);
         }
         else if (browser.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options=new FirefoxOptions();
-            options.addArguments("--headless");
+//            options.addArguments("--headless");
             driver=new FirefoxDriver(options);
         }
         driver.get(url);

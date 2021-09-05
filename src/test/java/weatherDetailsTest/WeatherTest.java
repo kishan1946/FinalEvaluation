@@ -69,7 +69,6 @@ public class WeatherTest {
         jsonData= webDriverManagerSetup.readJSONFile();
         callAPIAndUIClass=new CallAPIAndUIClass(driver);
         double humidityDifference=Math.abs(Double.parseDouble(callAPIAndUIClass.getUIHumidity())-Double.parseDouble(callAPIAndUIClass.getAPIHumidity()));
-        System.out.println(humidityDifference);
         Reporter.log("humidityDifference : "+Double.toString(humidityDifference));
         Assert.assertTrue(humidityDifference>=Double.parseDouble(jsonData.minVariance) && humidityDifference<=Double.parseDouble(jsonData.variance));
     }

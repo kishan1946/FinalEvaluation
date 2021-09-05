@@ -13,6 +13,8 @@ public class GetAPIWeatherDetailsRequest {
                 queryParam("appid", appid).
                 contentType(ContentType.JSON).
                 when().get(userDetailsApi);
+//        new Gson().fromJson(userDetailsResponse.body().prettyPrint(), GetWeatherDetailsResponse.class);
+//        userDetailsResponse.body().jsonPath().get();
         return userDetailsResponse;
     }
 

@@ -1,65 +1,82 @@
 package weatherDetailsTest;
 
 import callAPIAndUIDetails.CallAPIAndUIClass;
-import initializer.JSONData;
+import jsonData.JSONData;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import uiAutomation.initializer.WebDriverManagerSetup;
 
 import java.io.IOException;
 
 @Listeners(ListenerTest.class)
 public class WeatherTest {
+
+    private WebDriver driver;
+    private WebDriverManagerSetup webDriverManagerSetup=new WebDriverManagerSetup();
+    private CallAPIAndUIClass callAPIAndUIClass;
+
     @BeforeMethod
     public void setup() throws IOException, ParseException {
         String browser=System.getProperty("browser");
         JSONData jsonData=new JSONData();
-        jsonData= initializer.WebDriverManagerSetup.readJSONFile();
-        initializer.WebDriverManagerSetup.browserSetup(browser, jsonData.url);
+        jsonData= webDriverManagerSetup.readJSONFile();
+        driver=webDriverManagerSetup.factoryDriver(driver);
 
-        CallAPIAndUIClass callAPIAndUIClass=new CallAPIAndUIClass();
+        callAPIAndUIClass=new CallAPIAndUIClass(driver);
         callAPIAndUIClass.homePage();
         callAPIAndUIClass.weatherDetails();
         callAPIAndUIClass.manageWeatherData();
     }
-    @Test
+
+    @Test(priority = 0)
     public void temperatureTest() throws IOException, ParseException {
-        CallAPIAndUIClass callAPIAndUIClass=new CallAPIAndUIClass();
+        JSONData jsonData=new JSONData();
+        jsonData= webDriverManagerSetup.readJSONFile();
+        callAPIAndUIClass=new CallAPIAndUIClass(driver);
         double tempDifference=Math.abs(Double.parseDouble(callAPIAndUIClass.getUITemp())-Double.parseDouble(callAPIAndUIClass.getAPITemp()));
-        System.out.println(tempDifference);
-
-        Assert.assertTrue(0<= tempDifference && tempDifference>=5);
+        Reporter.log("tempDifference : "+Double.toString(tempDifference));
+        Assert.assertTrue(tempDifference>=Double.parseDouble(jsonData.minVariance) && tempDifference<=Double.parseDouble(jsonData.variance));
 
     }
-    @Test
+    @Test(priority = 1)
     public void pressureTest() throws IOException, ParseException {
-        CallAPIAndUIClass callAPIAndUIClass=new CallAPIAndUIClass();
+        JSONData jsonData=new JSONData();
+        jsonData= webDriverManagerSetup.readJSONFile();
+        callAPIAndUIClass=new CallAPIAndUIClass(driver);
         double pressureDifference=Math.abs(Double.parseDouble(callAPIAndUIClass.getUIPressure())-Double.parseDouble(callAPIAndUIClass.getAPIPressure()));
-        System.out.println(pressureDifference);
-        Assert.assertTrue(0<= pressureDifference && pressureDifference>=5);
+        Reporter.log("pressureDifference : "+Double.toString(pressureDifference));
+        Assert.assertTrue(pressureDifference>=Double.parseDouble(jsonData.minVariance) && pressureDifference<=Double.parseDouble(jsonData.pressureVariance));
     }
-    @Test
+    @Test(priority = 2)
     public void windTest() throws IOException, ParseException {
-        CallAPIAndUIClass callAPIAndUIClass=new CallAPIAndUIClass();
+        JSONData jsonData=new JSONData();
+        jsonData= webDriverManagerSetup.readJSONFile();
+        callAPIAndUIClass=new CallAPIAndUIClass(driver);
         double uiWindSpeed=(5/18)*(Double.parseDouble(callAPIAndUIClass.getUIWind()));
         double windDifference=Math.abs(uiWindSpeed-Double.parseDouble(callAPIAndUIClass.getAPIWind()));
-        System.out.println(windDifference);
-        Assert.assertTrue(0<= windDifference && windDifference>=5);
+        Reporter.log("windDifference : "+Double.toString(windDifference));
+        Assert.assertTrue(windDifference>=Double.parseDouble(jsonData.minVariance) && windDifference<=Double.parseDouble(jsonData.windVariance));
     }
-    @Test
+    @Test(priority = 3)
     public void humidityTest() throws IOException, ParseException {
-        CallAPIAndUIClass callAPIAndUIClass=new CallAPIAndUIClass();
+        JSONData jsonData=new JSONData();
+        jsonData= webDriverManagerSetup.readJSONFile();
+        callAPIAndUIClass=new CallAPIAndUIClass(driver);
         double humidityDifference=Math.abs(Double.parseDouble(callAPIAndUIClass.getUIHumidity())-Double.parseDouble(callAPIAndUIClass.getAPIHumidity()));
         System.out.println(humidityDifference);
-        Assert.assertTrue(0<= humidityDifference && humidityDifference>=5);
+        Reporter.log("humidityDifference : "+Double.toString(humidityDifference));
+        Assert.assertTrue(humidityDifference>=Double.parseDouble(jsonData.minVariance) && humidityDifference<=Double.parseDouble(jsonData.variance));
     }
 
     @AfterMethod
     public void tearDown(){
-        initializer.WebDriverManagerSetup.tearDown();
+        driver.close();
     }
 
 

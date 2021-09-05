@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta charset='utf-8'>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Test1</a></td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi">0</td><td class="numi">160.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">Test1 &#8212; passed</th></tr>
+<tr class="passedodd"><td>weatherDetailsTest.WeatherTest</td><td><a href="#m1"><b>humidityTest</b>  </a></td><td class="numi">1</td><td>1630746228950</td><td class="numi">549</td></tr>
+<tr class="passedeven"><td>weatherDetailsTest.WeatherDataTest</td><td><a href="#m2"><b>weatherDataTest</b>  </a></td><td class="numi">4</td><td>1630746107635</td><td class="numi">121671</td></tr>
+<tr class="passedodd"><td>weatherDetailsTest.WeatherTest</td><td><a href="#m3"><b>temperatureTest</b>  </a></td><td class="numi">1</td><td>1630746109189</td><td class="numi">2570</td></tr>
+<tr class="passedeven"><td rowspan="2">weatherDetailsTest.WeatherDataTest</td><td><a href="#m4"><b>weatherDataTest</b>  </a></td><td class="numi">4</td><td>1630746107635</td><td class="numi">121671</td></tr><tr class="passedeven"><td><a href="#m5"><b>weatherDataTest</b>  </a></td><td class="numi">4</td><td>1630746107635</td><td class="numi">121671</td></tr>
+<tr class="passedodd"><td rowspan="2">weatherDetailsTest.WeatherTest</td><td><a href="#m6"><b>pressureTest</b>  </a></td><td class="numi">1</td><td>1630746150168</td><td class="numi">618</td></tr><tr class="passedodd"><td><a href="#m7"><b>windTest</b>  </a></td><td class="numi">1</td><td>1630746188862</td><td class="numi">531</td></tr>
+<tr class="passedeven"><td>weatherDetailsTest.WeatherDataTest</td><td><a href="#m8"><b>weatherDataTest</b>  </a></td><td class="numi">4</td><td>1630746107635</td><td class="numi">121671</td></tr>
+</table>
+<h1>Test1</h1>
+<h2 id="m1">weatherDetailsTest.WeatherDataTest:weatherDataTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Temperature</td>
+</tr>
+<tr><td>
+tempDifference : 4.800000000000001<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">weatherDetailsTest.WeatherDataTest:weatherDataTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Wind</td>
+</tr>
+<tr><td>
+windDifference : 13.86<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">weatherDetailsTest.WeatherTest:pressureTest</h2>
+<div>
+pressureDifference : 0.0<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">weatherDetailsTest.WeatherTest:windTest</h2>
+<div>
+windDifference : 5.14<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">weatherDetailsTest.WeatherDataTest:weatherDataTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Humidity</td>
+</tr>
+<tr><td>
+humidityDifference : 1.0<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">weatherDetailsTest.WeatherTest:humidityTest</h2>
+<div>
+humidityDifference : 1.0<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">weatherDetailsTest.WeatherDataTest:weatherDataTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Pressure</td>
+</tr>
+<tr><td>
+pressureDifference : 0.0<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">weatherDetailsTest.WeatherTest:temperatureTest</h2>
+<div>
+tempDifference : 4.800000000000001<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

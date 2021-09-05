@@ -1,17 +1,17 @@
-package apiManage.apiResonse;
+package apiManage.apiResponse;
 
 import apiManage.apiRequest.GetAPIWeatherDetailsRequest;
-import uiAutomation.initializer.WebDriverManagerSetup;
-import jsonData.JSONData;
 import io.restassured.response.Response;
+import jsonData.JSONData;
 import org.json.simple.parser.ParseException;
+import uiAutomation.initializer.WebDriverManagerSetup;
 
 import java.io.IOException;
 
 public class ManageWeatherDetails {
     public Response apiCall() throws IOException, ParseException {
-        GetAPIWeatherDetailsRequest getAPIWeatherDetails=new GetAPIWeatherDetailsRequest();
         WebDriverManagerSetup webDriverManagerSetup=new WebDriverManagerSetup();
+        GetAPIWeatherDetailsRequest getAPIWeatherDetails=new GetAPIWeatherDetailsRequest();
         JSONData data=new JSONData();
         data= webDriverManagerSetup.readJSONFile();
         Response body=getAPIWeatherDetails.weatherDetails(data.userDetailsApi, data.q, data.units,data.appid);
@@ -45,5 +45,4 @@ public class ManageWeatherDetails {
         getWeatherDetailsResponse.setHumidity(getHumidity());
         getWeatherDetailsResponse.setWind(getWind());
     }
-
 }

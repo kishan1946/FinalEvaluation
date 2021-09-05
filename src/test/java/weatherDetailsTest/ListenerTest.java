@@ -13,17 +13,7 @@ public class ListenerTest implements ITestListener {
     }
 
     public void onTestFailure(ITestResult result) {
-
-//        File file=((TakesScreenshot) WebDriverManagerSetup.driver).getScreenshotAs(OutputType.FILE);
-//        String fileName=new SimpleDateFormat("yyyyMMddhhss").format(new Date());
-//        File dest=new File("./screenshot/"+fileName+".jpg");
-//        try {
-//            FileUtils.copyFile(file, dest);
-//        }
-//        catch (Exception e){
-//            e.printStackTrace();
-//        }
-        System.out.println("Test Failure :"+" "+ result.getName());
+        System.out.println("Test Failed :"+" "+ result.getName());
     }
 
     public void onTestSkipped(ITestResult result) {

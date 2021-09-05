@@ -1,19 +1,17 @@
 package uiAutomation.classPage;
 
-import uiAutomation.initializer.PageInitialization;
-import uiAutomation.initializer.WebDriverManagerSetup;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import uiAutomation.initializer.PageInitialization;
 
 public class WeatherDetails extends PageInitialization {
-    public Actions actions;
-    public JavascriptExecutor js;
+    private WebDriver driver;
+    private JavascriptExecutor js;
     public WeatherDetails(WebDriver driver) {
         super(driver);
-        this.actions=new Actions(driver);
+        this.driver=driver;
         this.js=(JavascriptExecutor) driver;
     }
 
@@ -30,8 +28,9 @@ public class WeatherDetails extends PageInitialization {
         moreDetails.click();
     }
     public void switchToFrame(){
-        WebDriverManagerSetup.driver.switchTo().frame(frameID);
-        actions.moveToElement(removeAdd).click().build().perform();
+        driver.switchTo().frame(frameID);
+//        actions.moveToElement(removeAdd).click().build().perform();
+        removeAdd.click();
     }
     public WebElement switchToiFrame(){
         return frameID;

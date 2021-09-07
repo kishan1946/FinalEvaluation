@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import uiAutomation.initializer.PageInitialization;
 
 public class HomePage extends PageInitialization {
-    public Actions actions;
+    private Actions actions;
     public HomePage(WebDriver driver) {
         super(driver);
         this.actions=new Actions(driver);

@@ -15,7 +15,7 @@ public class WeatherDetails extends PageInitialization {
         this.js=(JavascriptExecutor) driver;
     }
 
-    @FindBy(css = ".text")
+    @FindBy(css = "span.text")
     WebElement moreDetails;
     @FindBy(id = "dismiss-button")
     WebElement removeAdd;

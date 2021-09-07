@@ -6,12 +6,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageInitialization {
-//    public WebDriver driver;
+//    private WebDriver driver;
     public PageInitialization(WebDriver driver) {
         PageFactory.initElements(driver,this);
+//        this.driver=driver;
     }
 
 //    WebDriverManagerSetup webDriverManagerSetup=new WebDriverManagerSetup();
 //    public Actions actions=new Actions(driver);
-//    public JavascriptExecutor js=(JavascriptExecutor) webDriverManagerSetup.driver;
+//    public JavascriptExecutor js=(JavascriptExecutor) driver;
 }

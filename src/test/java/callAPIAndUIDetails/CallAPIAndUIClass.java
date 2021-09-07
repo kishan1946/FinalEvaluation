@@ -1,7 +1,7 @@
 package callAPIAndUIDetails;
 
-import apiManage.apiResponse.GetWeatherDetailsResponse;
-import apiManage.apiResponse.ManageWeatherDetails;
+import apiManage.apiResonse.GetWeatherDetailsResponse;
+import apiManage.apiResonse.ManageWeatherDetails;
 import jsonData.JSONData;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;

@@ -7,7 +7,6 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import uiAutomation.initializer.PageInitialization;
 import uiAutomation.initializer.WebDriverManagerSetup;
 
 import java.io.IOException;
